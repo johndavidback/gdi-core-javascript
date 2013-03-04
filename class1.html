@@ -38,7 +38,7 @@
 			<div class="slides">
 			  <!-- Opening slide -->
         <section>
-          <img src = "images/gdi_logo_badge.png">
+          <img src="images/gdi_logo_badge.png">
           <h3>Beginning Javascript</h3>
           <h4>Class 1</h4>
         </section>
@@ -46,9 +46,9 @@
         <!-- Welcome-->
         <section>
           <h3>Welcome!</h3>
-          <div class = "left-align">
+          <div class="left-align">
           <p>Girl Develop It is here to provide affordable and accessible programs to learn software through mentorship and hands-on instruction.</p>
-          <p class ="green">Some "rules"</p>
+          <p class="green">Some "rules"</p>
           <ul>
             <li>We are here for you!</li>
             <li>Every question is important</li>
@@ -60,8 +60,8 @@
         
         <section>
           <h3>Welcome!</h3>
-          <div class = "left-align">
-          <p class = "blue">Tell us about yourself.</p>
+          <div class="left-align">
+          <p class="blue">Tell us about yourself.</p>
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
@@ -76,20 +76,20 @@
          <h3>Terms</h3>
          <ul>
            <li>
-            <div class = "green">Web design</div>
+            <div class="green">Web design</div>
             <div>The process of planning, structuring and creating a website</div>
            </li>
            <li>
-            <div class = "green">Web development</div>
+            <div class="green">Web development</div>
             <div>The process of programming dynamic web applications</div>
            </li>
            <li>
-            <div class = "green">Front end</div>
+            <div class="green">Front end</div>
             <div>The outwardly visible elements of a website or application.
-            <span class ="blue">(Javascript goes here!)</span></div>
+            <span class="blue">(Javascript goes here!)</span></div>
            </li>
            <li>
-            <div class = "green">Back end</div>
+            <div class="green">Back end</div>
             <div>The inner workings and functionality of a website or application.</div>
            </li>
          </ul>
@@ -99,9 +99,9 @@
         <section>
           <h3>Clients and servers</h3>
           <p>How your computer accesses websites</p>
-          <img src = "images/client-server.png"/>
-          <p class = "fragment">JavaScript is "client side"</p>
-          <p class = "fragment">Your browser understands it!</p>
+          <img src="images/client-server.png"/>
+          <p class="fragment">JavaScript is "client side"</p>
+          <p class="fragment">Your browser understands it!</p>
         </section>
         
         <!-- Nitty gritty 2 - Tools -->
@@ -361,10 +361,25 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
             <li>Output the result in an alert(see below) like so: "You will need NN to last you until your old age of NN"</li>
           </ul>
           
-          <pre><code contenteditable class ="javascript">
+          <pre><code contenteditable class="javascript">
           alert(answer);
 </code></pre>
           
+        </section>
+
+        <!-- Intro to conditionals -->
+        <section>
+          <h3>On one condition...</h3>
+          <div class="left-align">
+            <p>JS performs logic with conditionals.</p>
+            <p>Is something true? Is it not true (false)?</p>
+            <p>"Is this number 5?"</p>
+            <p>"Is this person named John?"</p>
+            <p>"What is the meaning of life?"</p>
+            <p class="fragment">That last one is a joke.</p>
+
+          </div>
+
         </section>
         
         <!-- If statement-->
@@ -405,8 +420,8 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
             <tr class = "fragment"><td> !== </td><td> Inequality </td></tr>
             <tr class = "fragment"><td> > </td><td> Greater than </td></tr>
             <tr class = "fragment"><td> >= </td><td> Greater than or equal to </td></tr>
-            <tr class = "fragment"><td> < </td><td> Less than </td></tr>
-            <tr class = "fragment"><td> <= </td><td> Less than or equal to </td></tr>
+            <tr class = "fragment"><td> &lt; </td><td> Less than </td></tr>
+            <tr class = "fragment"><td> &lt;= </td><td> Less than or equal to </td></tr>
           </table>
           <p class = "fragment green"> Don't confuse = (assign a value) <br/>with === (compare a value)</p>
         </section>
@@ -415,7 +430,7 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
         <section>
           <h3>Logic</h3>
           <table>
-            <tr class = "fragment"><td> && </td><td> AND </td></tr>
+            <tr class = "fragment"><td> &amp;&amp; </td><td> AND </td></tr>
             <tr class = "fragment"><td> || </td><td> OR </td></tr>
             <tr class = "fragment"><td> ! </td><td> NOT </td></tr>
           </table>
@@ -423,10 +438,10 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
             <pre><code contenteditable class ="javascript">
         var bananas = 5;
         var oranges = 2;
-        if (bananas > 3 && oranges > 3){
+        if (bananas > 3 &amp;&amp; oranges > 3){
           console.log('Eat fruit!');
         }
-        if (bananas < 2 || oranges < 2){
+        if (bananas &lt; 2 || oranges &lt; 2){
           console.log('Buy fruit!');
         }
         if !(bananas >== 0){
@@ -440,7 +455,7 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
         <section>
           <h3>If/Else Statement</h3>
           <p>You can use else to perform an alternative action if the "if" fails</p>
-          <pre><code contenteditable class ="javascript">
+          <pre><code contenteditable class="javascript">
           var bananas = 5;
           if (bananas > 3){
             console.log('Eat a banana!');
@@ -453,7 +468,7 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
         <section>
           <h3>If/Else Statement</h3>
           <p>You can use else if to have multiple choices</p>
-          <pre><code contenteditable class ="javascript">
+          <pre><code contenteditable class="javascript">
 var age = 20;
 if (age >= 35) {
   console.log('You can vote AND hold any place in government!');

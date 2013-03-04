@@ -1,5 +1,5 @@
-var age = 26;
-var oldAge = 96;
+var age = 28;
+var oldAge = 60;
 var perDay = 2;
 
 var days = (oldAge - age) * 365;
