@@ -65,7 +65,7 @@
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
-            <li>What is your favorite dinosaur?</li>
+            <li>What is your favorite boy band?</li>
           </ul>
           </div>
         </section>
@@ -101,7 +101,7 @@
           <p>How your computer accesses websites</p>
           <img src="images/client-server.png"/>
           <p class="fragment">Your browser downloads the HTML</p>
-          <p class="fragment">It 'reads' the HTML and downloads all associated files</p>
+          <p class="fragment">It 'reads' the HTML and downloads all associated files, like CSS and JavaScript</p>
           <p class="fragment">JavaScript is "client side"</p>
           <p class="fragment">Your browser understands it!</p>
         </section>
@@ -243,7 +243,7 @@
           <div class = "fragment">
             <p>undefined -- no value yet</p>
             <pre><code contenteditable class ="javascript">
-              var favoriteDinosaur;
+              var favoriteBoyBand;
             </code></pre>
           </div>
           <div class = "fragment">
@@ -311,9 +311,9 @@
           <div class = "fragment">
             <p>Word-y expressions!</p>
             <pre><code contenteditable class ="javascript">
-var name = "Mitch";
-var dinosaur = "Stegosaurus";
-var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
+var name = "Nick Lachey";
+var band = "98 Degrees";
+var sentence = "My band is " + band + ". My name is " + name + ".";
             </code></pre>
           </div>
         </section>
@@ -333,7 +333,7 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
         <section>
           <h3>Let's Develop It</h3>
           <p>Create a new html file</p>
-          <pre><code class ="html">
+          <pre><code class="html">
 &lt;html>
   &lt;head>
     &lt;title>My Site!&lt;/title>
@@ -352,14 +352,14 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
 &lt;html>
   &lt;head>
     &lt;title>My Site!&lt;/title>
-    &lt;script src="class1.js">&lt;/script>
+    &lt;script src="javascript.js">&lt;/script>
   &lt;/head>
   &lt;body>
     My site!
   &lt;/body>
 &lt;/html>
 </code></pre>
-        <p>Save it as class1.js</p>
+        <p>Save it as javascript.js</p>
         </section>
         
         <section>
@@ -454,7 +454,7 @@ var sentence = "My dinosaur is a " + dinosaur + ". It's name is " + name + ".";
         if (bananas &lt; 2 || oranges &lt; 2){
           console.log('Buy fruit!');
         }
-        if !(bananas >== 0){
+        if !(bananas >= 0){
           console.log('How do you have negative bananas?');
         }
             </code></pre>
@@ -572,8 +572,11 @@ if (age >= 35) {
          <pre><code contenteditable class ="javascript">
     function addNumbers(num1, num2){
       var result = num1 + num2;
-      return result; //Anything after this line won't be read
+
+      //Anything after this line won't be read
+      return result; 
     }
+
     var sum  = addNumbers(5, 6);
           </code></pre>
           </div>
@@ -588,8 +591,11 @@ if (age >= 35) {
          <pre><code contenteditable class ="javascript">
   function addNumbers(num1, num2){
     var result = num1 + num2;
-    return result; //Anything after this line won't be read
+
+    //Anything after this line won't be read
+    return result; 
   }
+
   var sum  = addNumbers(5, 6);
   console.log(result); //will return undefined because result only exists inside the addNumbers function
           </code></pre>
@@ -606,8 +612,11 @@ if (age >= 35) {
    var result;
     function addNumbers(num1, num2){
       result = num1 + num2;
-      return result; //Anything after this line won't be read
+
+      //Anything after this line won't be read
+      return result; 
     }
+
     var sum  = addNumbers(5, 6);
     console.log(result); //will return 11 because the variable was defined outside the function
           </code></pre>
@@ -621,7 +630,7 @@ if (age >= 35) {
             <p>Wrap the lifetime supply calculator in a function called calculate()</p>
             <p>Add a link to the html that calls the function when it is clicked</p>
         <pre><code contenteditable class ="html">
- &lt;a href = "#" onclick="calculate()">
+ &lt;a href="#" onclick="calculate()">
  Calculate life time supply
  &lt;/a>
          </code></pre>
