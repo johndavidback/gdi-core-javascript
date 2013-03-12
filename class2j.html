@@ -91,6 +91,28 @@ var children = document.body.children;
         </section>
 
         <section>
+          <h3>Objects</h3>
+          <div class="left-align">
+            <p>Every 'node' in the DOM is an object</p>
+            <p class="fragment">A variable on steroids</p>
+            <p class="fragment">It represents a real thing</p>
+            <p class="fragment">Uses 'dot notation' to access things</p>
+          </div>
+<pre class="fragment"><code contenteditable class="javascript">
+var myCar = { 
+  color: 'black',
+  wheels: 4,
+  ...
+};
+
+// So...
+myCar.color;
+=&gt; 'black'
+</code></pre>
+        </section>
+
+
+        <section>
           <h3>Selectors... Remember CSS?</h3>
           <p class="fragment">You want to traverse the DOM tree using nodes?</p>
           <img class="fragment" src="images/time-for-that.gif">
@@ -109,18 +131,38 @@ var children = document.body.children;
 <pre><code class="javascript">
   var bio = document.getElementById('john-bio');
 </code></pre>
+          <p class="fragment">Now, the variable 'bio' is an object that represents our bio paragraph!</p>
 
         </section>
 
         <section>
-          <h3>Modify things with JS</h3>
-          <p>Styles</p>
-          <p>Content</p>
+          <h3>Dominate your dom</h3>
+          <p>That was a play on words.</p>
+          <p class="fragment">We can use node methods to set and retrieve attributes</p>
+          <div class = "fragment">
+            getAttribute/setAttribute
+            <pre><code contenteditable class = "javascript">
+ var img = document.getElementById('mainpicture');
+ img.getAttribute('src');
+ img.setAttribute('src', 'http://girldevelopit.com/assets/pink-logo.png');
+            </code></pre>
+            
+            <pre><code contenteditable class = "javascript">
+ var img = document.getElementById('mainpicture');
+ img.getAttribute('class');
+ img.setAttribute('class', 'picture-class');
+            </code></pre>
+          </div>
+
         </section>
 
         <section>
-          <h3>Create elements</h3>
-          <p>Add a list of numbers</p>
+          <h3>Exercise 1</h3>
+          <div class="left-align">
+            <p>Let's play around with a webpage.</p>
+            <p>Navigate to <a href="class2/exercise1.html" target="_blank">this page</a></p>
+            <p>Open the inspector and use the Console to play around.</p>
+            <p>Use Handout 1 for reference</p>
         </section>
 
 <!-- What is a library-->

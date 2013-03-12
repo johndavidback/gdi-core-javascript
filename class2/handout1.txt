@@ -1,0 +1,31 @@
+
+To grab an element by id:
+
+    var someThing = document.getElementById('the-id-goes-here');
+
+Then you can do some fun stuff with it:
+
+    someThing.setAttribute('style', 'color: blue;');
+    someThing.innerHTML = 'I have tototally just ruined whatever this was before';
+
+
+You can also grab all of some type of element:
+    
+    var paragraphs = document.getElementsByTagName('p');
+
+    (Note, it is Elements as opposed to Element)
+
+See how many paragraphs there are:
+
+    paragraphs.length;
+
+These are stored as what's called an 'array'.  We'll learn about those next week. But as a bonus,
+you can access them like this:
+
+    paragraphs[0];
+    paragraphs[1];
+    etc.
+
+Each of those is a node that you can access the same as before:
+
+    paragraphs[0].setAttribute('class', 'red');
