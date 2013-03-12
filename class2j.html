@@ -61,16 +61,54 @@
         <!-- Javascript and the DOM -->
         <section>
           <h3>The DOM</h3>
+          <div class="left-align">
+            <p class="fragment">Document Object Model</p>
+            <p class="fragment">All the HTML on the page</p>
+            <p class="fragment">How we can interact with it</p>
+            <p class="fragment">Chrome/Firefox, right click "Inspect Element"
+              <img src = "images/dom.png" class = "fragment">
+            </p>
+
+          </div>
 
         </section>
 
         <section>
+          <h3>DOM Elements</h3>
+          <div class="left-align">
+            <p class="fragment">The DOM let's us access everything up and down the "tree"</p>
+            <p class="fragment">Each element is a "node"</p>
+            <p class="fragment">I have no idea what nodes have to do with trees.</p>
+            <p class="fragment">Parent - 'parentNode', children - 'childNodes', siblings - 'prevSibling'</p>
+            <p class="fragment">To grab the &lt;body&gt; of your HTML document:</p>
+<pre class="fragment"><code class="javascript">
+var bodyNode = document.body;
+
+// Anything directly under body in the DOM
+var children = document.body.children;
+</code></pre>
+          </div>
+        </section>
+
+        <section>
           <h3>Selectors... Remember CSS?</h3>
+          <p class="fragment">You want to traverse the DOM tree using nodes?</p>
+          <img class="fragment" src="images/time-for-that.gif">
+          <p class="fragment">p, h1, #some-id, .some-class, ...</p>
+          <p class="fragment">Javascript has built in ways as well!</p>
 
         </section>
 
         <section>
           <h3>Select with pure JS</h3>
+          <p>The HTML</p>
+<pre><code class="html">
+&lt;p id="john-bio">This is the story of a guy named John&lt;/p>
+</pre></code>
+<p>The JavaScript</p>
+<pre><code class="javascript">
+  var bio = document.getElementById('john-bio');
+</code></pre>
 
         </section>
 
