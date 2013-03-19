@@ -10,8 +10,9 @@
             }
         </style>
 
-        <!-- Link to the bjqs.css and demo.css files here -->
-
+        <!-- Link to the bjqs.css file here -->
+        <link href="bjqs.css" type="text/css" rel="stylesheet">
+        <link href="demo.css" type="text/css" rel="stylesheet">
 
     </head>
 
@@ -21,18 +22,30 @@
 
         <p>Replace me with your &lt;ul&gt; and &lt;li&gt;'s.</p>
 
+        <div id="slider">
+            <ul class="bjqs">
+                <li><img src="http://placecage.com/500/300" title="Ode to Nick Cage"></li>
+                <li><img src="http://placekitten.com/500/300" title="Sweet Kitty!"></li>
+                <li><img src="http://placecage.com/400/300" title="One more NC"></li>
+            </ul>
+
+        </div>
+
 
         <!-- Include jQuery from the CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 
         <!-- Include the Basic jQuery Slider js -->
-        
+        <script src="js/bjqs-1.3.js"></script>
 
         <script>
             $(document).ready(function() {
 
                 // Add your fancy jQuery here to get the slider working. Good luck!
-                
+                $("#slider").bjqs({
+                    width: 500,
+                    height: 300
+                });
 
             });
 
