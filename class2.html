@@ -79,7 +79,6 @@
             <p class="fragment">The DOM let's us access everything up and down the "tree"</p>
             <p class="fragment">Each element is a "node"</p>
             <p class="fragment">I have no idea what nodes have to do with trees.</p>
-            <p class="fragment">Parent - 'parentNode', children - 'childNodes', siblings - 'prevSibling'</p>
             <p class="fragment">To grab the &lt;body&gt; of your HTML document:</p>
 <pre class="fragment"><code class="javascript">
 var bodyNode = document.body;
@@ -97,6 +96,7 @@ var children = bodyNode.children;
             <p class="fragment">- A variable on steroids</p>
             <p class="fragment">- It represents a real thing</p>
             <p class="fragment">- Uses 'dot notation' to access things</p>
+            <p class="fragment">- Can have variables and functions</p>
           </div>
 <pre class="fragment"><code contenteditable class="javascript">
 var myCar = { 
@@ -318,9 +318,9 @@ var images = $(".picture"); //All images with class picture
         <!-- html values-->
         <section>
           <h3>Updating values and html</h3>
-          <div class = "fragment">
-            <pre><code contenteditable class = "html">
-  &lt;div class = "results">Boo!&lt;/div>         
+          <div class="fragment">
+            <pre><code contenteditable class="html">
+  &lt;div id="results">Boo!&lt;/div>         
             </code></pre>
           </div>
           <div class = "fragment">
@@ -336,9 +336,9 @@ var images = $(".picture"); //All images with class picture
         <!-- Append and prepend-->
         <section>
           <h3>Append and Prepend</h3>
-          <div class = "fragment">
+          <div class="fragment">
             <pre><code contenteditable class = "html">
-  &lt;div class = "results">Boo!&lt;/div>         
+  &lt;div id="results">Boo!&lt;/div>         
             </code></pre>
           </div>
           <div class = "fragment">
@@ -372,8 +372,12 @@ var images = $(".picture"); //All images with class picture
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It!</h3>
-          <p>Try to convert last week's DOM interaction into jQuery.</p>
-          <p>Don't forget to include jQuery in your html head!</p>
+          <div class="left-align">
+          <p>Let's have some fun with jQuery!</p>
+          <p>Go to <a href="class2/exercise2.html" target="_blank">this page</a>.</p>
+          <p>jQuery has been included for you in the bottom.</p>
+          <p>Use that inspector!</p>
+        </div>
         </section>
         
         <!-- Document Ready-->
@@ -479,9 +483,10 @@ var images = $(".picture"); //All images with class picture
           <h3>Let's Develop It</h3>
           <ul>
             <li>Add a div to your html that is 100px by 200px</li>
+            <li>Look to <a href="class2/exercise3.html" target="_blank">this page</a> for inspiration.</p>
             <li>Bind events to the div in your javascript file</li>
             <li>Don't forget to surround your events with document ready</li>
-            <li>Try to change size, color, or event the html inside the div</li>
+            <li>Try to change size, color, or even the html inside the div</li>
             <li>Bonus: change all the onclick events to jQuery click events</li>
           </ul>
         </section>
@@ -491,20 +496,20 @@ var images = $(".picture"); //All images with class picture
           <h3>HTML forms</h3>
           <p>HTML Forms allow users to enter information</p>
           <div class = "fragment">
-            <pre><code contenteditable class = "html">
-&lt;form id ="about-me">
-  &lt;input type = "text" id = "name" placeholder = "Enter a name"/>
+            <pre><code contenteditable class="html">
+&lt;form id="about-me">
+  &lt;input type="text" id="name" placeholder="Enter a name"/>
   &lt;label>Do you like popcorn&lt;/label>
-  Yes &lt;input type = "radio" name = "popcorn" val = "yes"/>
-  No &lt;input type = "radio" name = "popcorn" val = "no"/>
+  Yes &lt;input type="radio" name="popcorn" val="yes"/>
+  No &lt;input type="radio" name="popcorn" val="no"/>
   &lt;label>Favorite Dinosaur&lt;/label>
-  &lt;select id = "dinosaur">
-    &lt;option value = "t-rex">Tyrannosaurus Rex&lt;/option>
-    &lt;option value = "tri">Triceratops&lt;/option>
-    &lt;option value = "stego">Stegosaurus&lt;/option>
-    &lt;option value = "other">Other&lt;/option>
+  &lt;select id="dinosaur">
+    &lt;option value="t-rex">Tyrannosaurus Rex&lt;/option>
+    &lt;option value="tri">Triceratops&lt;/option>
+    &lt;option value="stego">Stegosaurus&lt;/option>
+    &lt;option value="other">Other&lt;/option>
   &lt;/select>
-  &lt;input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
+  &lt;input type="submit" value="Go!" style="padding: 7px; font-size:1em"/>
 &lt;/form>
             </code></pre>
           </div>
@@ -570,10 +575,8 @@ var images = $(".picture"); //All images with class picture
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Choose one (or all!) of your functions made so far</li>
-            <li>i.e. lifetime supply, favorite things, or my friends</li>
-            <li>Create a form to send dynamic data to the function when you click the button</li>
-            <li>Don't forget to add parameters to your existing functions!</p>
+            <li>Create a simple form, or use the one from a few slides back</li>
+            <li>When the form is submitted, print those on the page formatted nicely.</li>
             <li>This is a little harder than all the other exercises.</li>
             <li>Be creative!</li>
           </ul>
