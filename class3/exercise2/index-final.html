@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Modal windows, what?!</title>
+        <style>
+            body {
+                font-family: Georgia;
+                padding-left: 30px;
+            }
+
+            .thumb {
+                width: 200px;
+            }
+
+            #kittens {
+                list-style-type: none;
+            }
+        </style>
+
+        <!-- Link to the lightbox .css file here -->
+        <link href="css/lightbox.css" rel="stylesheet">
+
+        <!-- Include jQuery from the CDN, needs to be 1.7.2 -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
+        <!-- Include the lightbox js -->
+        <script src="js/lightbox.js"></script>
+
+
+
+    </head>
+
+    <body>
+
+        <h1>Let's add some totally rad stuff.</h1>
+
+        
+        <p>This is just <a href="http://johndavidback.com/media/images/john.jpg" rel="lightbox" title="What a fun photo!">a test</a>.</p>
+
+        <div>
+            <a href="http://placecage.com/500/500" rel="lightbox"><img src="http://placecage.com/500/500" class="thumb"></a>
+        </div>
+        <div>
+            <a href="http://placecage.com/400/500" rel="lightbox"><img src="http://placecage.com/400/500" class="thumb"></a>
+        </div>
+
+        <div>
+            <h3>Kittens! A gallery.</h3>
+            <ul id="kittens">
+                <li><a href="http://placekitten.com/200/300" rel="lightbox[kittens]">One</a></li>
+                <li><a href="http://placekitten.com/300/400" rel="lightbox[kittens]">Two</a></li>
+                <li><a href="http://placekitten.com/500/650" rel="lightbox[kittens]">Three</a></li>
+                <li><a href="http://placekitten.com/800/800" rel="lightbox[kittens]">Big kitty</a></li>
+            </ul>
+        </div>
+
+    </body>
+
+
+</html>
