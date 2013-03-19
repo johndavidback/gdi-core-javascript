@@ -1,42 +1,42 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+    <head>
+        <meta charset="utf-8">
 
-		<title>Class 2 ~ Javascript ~ Girl Develop IT</title>
+        <title>Class 2 ~ Javascript ~ Girl Develop IT</title>
 
-		<meta name="description" content="This is the official Girl Develop It Core Intro Javascript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston and Leo Newball.
+        <meta name="description" content="This is the official Girl Develop It Core Intro Javascript course. Material based on original material by Sara Chipps, Pamela Fox, Alexis Goldstein, Izzy Johnston and Leo Newball.
 
     The course is meant to be taught in 4 two-hour sections. Each of the slides and practice files are customizable according to the needs of a given class or audience.">
-		<meta name="author" content="Girl Develop It">
+        <meta name="author" content="Girl Develop It">
 
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-		<link rel="stylesheet" href="reveal/css/reveal.css">
-		<link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
+        <link rel="stylesheet" href="reveal/css/reveal.css">
+        <link rel="stylesheet" href="reveal/css/theme/gdidefault.css" id="theme">
 
-		<!-- For syntax highlighting -->
-		<!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
-		<!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
+        <!-- For syntax highlighting -->
+        <!-- light editor<link rel="stylesheet" href="lib/css/light.css">-->
+        <!-- dark editor--><link rel="stylesheet" href="reveal/lib/css/dark.css">
 
-		<!-- If use the PDF print sheet so students can print slides-->
-		
-		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
+        <!-- If use the PDF print sheet so students can print slides-->
+        
+        <link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
 
-	<body>
+    <body>
 
-		<div class="reveal">
+        <div class="reveal">
 
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-			  <!-- Opening slide -->
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+              <!-- Opening slide -->
         <section>
           <img src = "images/gdi_logo_badge.png">
           <h3>Beginning Javascript</h3>
@@ -57,377 +57,88 @@
           </ul>
           </div>
         </section>
-        
-        <!-- Loops-->
+
+        <!-- Javascript and the DOM -->
         <section>
-          <h3>Loops</h3>
-          <p>Sometimes you want to go through a piece of code multiple times</p>
-          <p class = "fragment">Why?</p>
-          <ul>
-            <li class = "fragment">Showing a timer count down</li>
-            <li class = "fragment">Displaying the results of a search</li>
-            <li class = "fragment">Adding images to a slideshow</li>
-          </ul>
-        </section>
-        
-         <section>
-          <h3>The while loop</h3>
-          <p>The while loop tells JS to repeat statements until a condition is true:</p>
-          <pre><code contenteditable class = "javascript">
-      while (expression) {
-        // statements to repeat
-      }
-          </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var x = 0;
-      while (x < 5) {
-        console.log(x);
-        x++;
-      }
-          </code></pre>
-          <div class = "fragment">
-            Review: '++' means increment by 1!
+          <h3>The DOM</h3>
+          <div class="left-align">
+            <p class="fragment">Document Object Model</p>
+            <p class="fragment">All the HTML on the page</p>
+            <p class="fragment">How we can interact with it</p>
+            <p class="fragment">Chrome/Firefox, right click "Inspect Element"
+              <img src = "images/dom.png" class = "fragment">
+            </p>
+
           </div>
-          <div class = "fragment">
-            <div class = "yellow">Danger!!</div>
-            <p>What happens if we forget x++;?</p>
-            <p>The loop will never end!!</p>
-          </div>
+
         </section>
-        
+
         <section>
-          <h3>The for loop</h3>
-          <p>The for loop is a safer way of looping</p>
-          <pre><code contenteditable class = "javascript">
-          for (initialize; condition; update) {
-            // statements to repeat
-          }
-          </code></pre>
-          <pre><code contenteditable class = "javascript">
-          for (var i = 0; i < 5; i++) {
-            console.log(i);
-          }
-          </code></pre>
-          <div class = "fragment">
-            Less danger of an infinite loop. All conditions are at the top!
+          <h3>DOM Elements</h3>
+          <div class="left-align">
+            <p class="fragment">The DOM let's us access everything up and down the "tree"</p>
+            <p class="fragment">Each element is a "node"</p>
+            <p class="fragment">I have no idea what nodes have to do with trees.</p>
+            <p class="fragment">Parent - 'parentNode', children - 'childNodes', siblings - 'prevSibling'</p>
+            <p class="fragment">To grab the &lt;body&gt; of your HTML document:</p>
+<pre class="fragment"><code class="javascript">
+var bodyNode = document.body;
+
+// Anything directly under body in the DOM
+var children = bodyNode.children;
+</code></pre>
           </div>
         </section>
-          
-        <!-- Arrays -->
-        <section>
-          <h3>Array</h3>
-          <p>An array is a data-type that holds an ordered list of values, of any type:</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var arrayName = [element0, element1, ...];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-var favoriteNumbers = [16, 27, 88];
-var luckyThings = ['Rainbows', 7, 'Horseshoes'];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            The length property reports the size of the array:
-            <pre><code contenteditable class = "javascript">
-          console.log(rainbowColors.length);
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays -- returning values</h3>
-          <p class = "fragment">You can access items with "bracket notation".</p> 
-          <div class = "fragment">
-            The number inside the brackets is called an "index"
-            <pre><code contenteditable class = "javascript">
-          var arrayItem = arrayName[indexNum];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Nerds are weird, so we start counting at 0.
-            <pre><code contenteditable class = "javascript">
-      var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-      var firstColor = rainbowColors[0];
-      var lastColor = rainbowColors[6];
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays -- updating values</h3>
-          <div class = "fragment">
-          You can also use bracket notation to change the item in an array:
-            <pre><code contenteditable class = "javascript">
-        var awesomeAnimals = ['Corgis', 'Otters', 'Octopi'];
-        awesomeAnimals[0] = 'Bunnies';
-            </code></pre>
-          </div>
-          <div class = "fragment">
-          Or to add to an array:
-            <pre><code contenteditable class = "javascript">
-          awesomeAnimals[4] = 'Corgis';
-            </code></pre>
-          </div>
-          
-          <div class = "fragment">
-         You can also use the push method:
-            <pre><code contenteditable class = "javascript">
-          awesomeAnimals.push('Ocelots');
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Loops and Arrays</h3>
-          Use a for loop to easily look at each item in an array:
-          <pre><code contenteditable class = "javascript">
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet'];
-for (var i = 0; i < rainbowColors.length; i++) {
-  console.log(rainbowColors[i]);
-}
-          </code></pre>
-        </section>
-        
-        <!-- Exercise -->
-        <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Add a new link to the exercise from last week</li>
-            <li>Add an onclick to the link for a function called favoriteThings()</li>
-            <li>Create a new function called favoriteThings() in the javascript file</li>
-            <li>In the function, create an array and loop through the results</li>
-            <li>Post the results in an alert "My favorite things are XX, YY, ZZ'</li>
-            <li>Bonus -- add an 'and' in the sentence before the last item</li>
-          </ul>
-        </section>
-        
-        <!-- Objects-->
+
         <section>
           <h3>Objects</h3>
-          <p>Objects are a data type that let us store a collection of properties and methods.</p>
-          <pre><code contenteditable class = "javascript">
-          var objectName = { 
-            propertyName: propertyValue,
-            propertyName: propertyValue,
-            ...
-          };
-          </code></pre>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      var charlie = {
-        age: 8,
-        name: "Charlie Brown",
-        likes: ["baseball", "The little red-haired girl"],
-        pet: "Snoopy"
-      };
-          </code></pre>
+          <p>Every 'node' in the DOM is an object</p>
+          <div class="left-align">
+            <p class="fragment">- A variable on steroids</p>
+            <p class="fragment">- It represents a real thing</p>
+            <p class="fragment">- Uses 'dot notation' to access things</p>
           </div>
+<pre class="fragment"><code contenteditable class="javascript">
+var myCar = { 
+  color: 'black',
+  wheels: 4,
+  ...
+};
+
+// So...
+myCar.color;
+=&gt; 'black'
+</code></pre>
         </section>
-        
+
+
         <section>
-          <h3>Objects -- returning values</h3>
-          <p>Access values of "properties" using "dot notation":</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-      var charlie = {
-        age: 8,
-        name: "Charlie Brown",
-        likes: ["baseball", "The little red-haired girl"],
-        pet: "Snoopy"
-      };
-      </code></pre>
-          </div> 
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var pet = charlie.pet;
-            </code></pre>
-          </div>
+          <h3>Selectors... Remember CSS?</h3>
+          <p class="fragment">You want to traverse the DOM tree using nodes?</p>
+          <img class="fragment" src="images/time-for-that.gif">
+          <p class="fragment">p, h1, #some-id, .some-class, ...</p>
+          <p class="fragment">Javascript has built in ways as well!</p>
+
         </section>
-        
+
         <section>
-          <h3>Objects -- returning values</h3>
-          <div class = "fragment">
-            Or using "bracket notation" (like arrays):
-            <pre><code contenteditable class = "javascript">
-          var name = charlie['name'];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            Non-existent properties will return undefined:
-            <pre><code contenteditable class = "javascript">
-          var gender = charlie.gender
-            </code></pre>
-          </div>
+          <h3>Select with pure JS</h3>
+          <p>The HTML</p>
+<pre><code class="html">
+&lt;p id="john-bio">This is the story of a guy named John&lt;/p>
+</pre></code>
+<p>The JavaScript</p>
+<pre><code class="javascript">
+  var bio = document.getElementById('john-bio');
+</code></pre>
+          <p class="fragment">Now, the variable 'bio' is an object that represents our bio paragraph!</p>
+
         </section>
-        
+
         <section>
-          <h3>Objects -- changing values</h3>
-          <p>Use dot or bracket notation with the assignment operator to change objects.</p>
-          <div class = "fragment">
-          Change existing properties:
-          <pre><code contenteditable class = "javascript">
-          charlie.name = "Chuck";
-          </code></pre>
-          </div>
-          <div class = "fragment">
-            Or add new properties:
-            <pre><code contenteditable class = "javascript">
-          charlie.gender = "male";
-            </code></pre>
-          </div>
-          <div class ="fragment">
-          You can also delete properties:
-          <pre><code contenteditable class = "javascript">
-          delete charlie.gender;
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Arrays of Objects</h3>
-          <p>Arrays can hold objects too!</p>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-          var peanuts = [
-            {name: "Charlie Brown", 
-             pet: "Snoopy"},
-            {name: "Linus van Pelt",
-             pet: "Blue Blanket"}
-          ];
-            </code></pre>
-          </div>
-          <div class = "fragment">
-            That means we can use a for loop!
-            <pre><code contenteditable class = "javascript">
-  for (var i = 0; i < peanuts.length; i++) {
-    var peanut = peanuts[i];
-    console.log(peanut.name + ' has a pet named ' + peanut.pet + '.');
-  }
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>Objects in functions</h3>
-          <p>You can pass an object into a function as a parameter</p>
-          <pre><code contenteditable class = "javascript">
-        var peanut ={
-          name: "Charlie Brown", 
-          pet: "Snoopy"
-          };
-          </code></pre>
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  function describeCharacter(character){
-    console.log(character.name + ' has a pet named ' + character.pet + '.');
-  }
-            </code></pre>
-          </div>
-         <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-              describeCharacter(peanut);
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- Exercise -->
-        <section>
-          <h3>Let's Develop It</h3>
-          <ul>
-            <li>Add another link that calls the function myFriends() onclick</li>
-            <li>Add a new function to the javascript myFriends</li>
-            <li>In the function, create an array of friends objects, with their names and hair colors</li>
-            <li>Use a for loop to go through each friend and describe them</li>
-            <li>Alert the results</li>
-            <li>Bonus -- make a separate functions that describe the friends</li>
-          </ul>
-        </section>
-        
-        <!-- DOM -->
-        <section>
-          <h3>DOM</h3>
-          <ul>
-            <li class = "fragment">"Document Object Model"</li>
-            <li class = "fragment">A way to interact with the HTML elements on a webpage</li>
-            <li class = "fragment">Chrome and Firefox -- Right click --> Inspect Element</li>
-          </ul>
-          <img src = "images/dom.png" class = "fragment">
-        </section>
-        
-        <section>
-          <h3>DOM Interaction</h3>
-          <p class = "fragment">On every webpage, the document object gives us ways of accessing and changing the DOM.</p>
-          <p class = "fragment left-align">Every DOM "node" has properties. They are connected like a family tree.</p>   
-          <p class = "fragment left-align"> Parent (parentNode), children (childNodes, firstChild), siblings (prevSibling, nextSibling)</p> 
-          <div class = "fragment">
-            <pre><code contenteditable class = "javascript">
-  var bodyNode = document.body; // &lt;body>
-  var htmlNode = document.body.parentNode; // &lt;html>
-  for (var i = 0; i < document.body.childNodes.length; i++) {
-    var childNode = document.body.childNodes[i];
-    //could be &lt;p>, &lt;h1>, etc.
-    //any html element
-  }
-          </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction: Easier</h3>
-          <p class = "fragment blue">Finding every element on the page by siblings and children is time consuming!</p>
-          <p class = "fragment">The document object also provides methods for finding DOM nodes without going one by one</p>
-          <div class = "fragment">
-            Find element by id
-            <pre><code contenteditable class = "html">
-&lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">
-            </code></pre>
-            <pre><code contenteditable class = "javascript">
-var img = document.getElementById('mainpicture');            
-            </code></pre>
-          </div>
-        </section>
-        
-        <section>
-          <h3>DOM Interaction: Easier</h3>
-          <div class = "fragment">
-            Find element by tag name (p, li, div, etc.)
-            <pre><code contenteditable class = "html">
-          &lt;li class="peanut">Charlie Brown&lt;/li>
-          &lt;li class="peanut">Linus van Pelt&lt;/li>
-            </code></pre>
-          <pre><code contenteditable class = "javascript">
-      var listItems = document.getElementsByTagName('li');
-      for (var i =0; i < listItems.length; i++) {
-        var listItem = listItems[i];
-      }
-          </code></pre>
-          </div>
-        </section>
-        
-        <!-- Methods-->
-        <section>
-          <h3>Methods</h3>
-          <ul>
-            <li class = "fragment">Methods are special functions</li>
-            <li class = "fragment">The affect or return a value for a specific object</li>
-            <li class = "fragment">Used with dot notation</li>
-          </ul>
-          <div class = "fragment">
-            Previously seen example:
-            <pre><code contenteditable class = "javascript">
-  var candy = ['Gummy Bears', 'Sour Patch Kids', 'Swedish Fish'];
-  var length = candy.length;
-            </code></pre>
-          </div>
-        </section>
-        
-        <!-- Attributes-->
-        <section>
-          <h3>DOM Nodes -- Attributes</h3>
-          <p>We can use node methods to set and retrieve attributes</p>
+          <h3>Dominate your dom</h3>
+          <p>That was a play on words.</p>
+          <p class="fragment">We can use node methods to set and retrieve attributes</p>
           <div class = "fragment">
             getAttribute/setAttribute
             <pre><code contenteditable class = "javascript">
@@ -442,113 +153,474 @@ var img = document.getElementById('mainpicture');
  img.setAttribute('class', 'picture-class');
             </code></pre>
           </div>
+
+        </section>
+
+        <section>
+          <h3>Exercise 1</h3>
+          <div class="left-align">
+            <p>Let's play around with a webpage.</p>
+            <p>Navigate to <a href="class2/exercise1.html" target="_blank">this page</a></p>
+            <p>Open the inspector and use the Console to play around.</p>
+            <p>Use Handout 1 for reference</p>
+        </section>
+
+<!-- What is a library-->
+        <section>
+          <h3>What is a library?</h3>
+          <ul>
+            <li class = "fragment">Software libraries hold functions (not books!)</li>
+            <li class = "fragment">When you include a library, you can use all the functions in that library</li>
+            <li class = "fragment">That means: <span class = "pink">you get to take advantage of other people's experience!</li>
+            <li class = "fragment">And... <span class ="blue">Save time!</span></li>
+          </ul>
         </section>
         
-        <!-- Inner HTML-->
+        <!-- What is jQuery-->
         <section>
-          <h3>DOM innerHTML</h3>
-          <p>Each DOM node has an innerHTML property:</p>
-        <div class = "fragment">
-          <pre><code contenteditable class = "javascript">
-        document.body.innerHTML;
-          </code></pre>
-        </div>
-        <div class = "fragment">
-        You can set innerHTML yourself to change the contents of the node:
-          <pre><code contenteditable class = "javascript">
-document.body.innerHTML = '&lt;p>I changed the whole page!&lt;/p>';
-          </code></pre>
-        </div>
-        <div class = "fragment">
-        You can also just add to the innerHTML instead of replace everything:
-          <pre><code contenteditable class = "javascript">
-document.body.innerHTML += "...just adding this bit at the end of the page.";
-          </code></pre>
-        </div>
+          <h3>What is jQuery?</h3>
+          <p class = "fragment">jQuery is a <span class = "green">library</span> of JavaScript functions.</p>
+          <p class = "fragment">It contains many functions to help simplify your programming, including:</p>
+          <ul>
+            <li class = "fragment">HTML element selection &amp; manipulation</li>
+            <li class = "fragment">CSS manipulation</li>
+            <li class = "fragment">HTML events</li>
+            <li class = "fragment">JavaScript effects and animations</li>
+          </ul>
         </section>
         
-        <!-- Create element and append child-->
         <section>
-          <h3>DOM Modifying</h3>
-          <p>The document object can create new nodes:</p>
+          <h3>Why use jQuery?</h3>
+          <ul>
+            <li class = "fragment">The most popular JavaScript library</li>
+            <li class = "fragment">jQuery empowers you to "write less, do more."</li>
+            <li class = "fragment">Great <a href = "http://docs.jquery.com/" target = "_blank">documentation and tutorials</a></li>
+            <li class = "fragment">Used by nearly 20 million(!) websites</li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>jQuery: A Brief History</h3>
+          <ul>
+            <li class = "fragment">jQuery was created by John Resig, a JavaScript tool developer at Mozilla.</li>
+            <li class = "fragment">January 2006: John announced jQuery at BarCampNYC: BarCampNYC Wrap-up</li>
+            <li class = "fragment">September 2007: A new user interface library is added to jQuery: jQuery UI: Interactions and Widgets</li>
+            <li class = "fragment">September 2008: Microsoft and Nokia announce their support for jQuery</li>
+            <li class = "fragment">December 2009: jQuery wins .Net Magazine's Award for Best Open Source Application</li>
+          </ul>
+        </section>
+        
+        <!-- Including jquery-->
+        <section>
+          <h3>Including jQuery</h3>
+          Two ways to include jQuery on your page:
           <div class = "fragment">
+            Download the library, store it locally:
+          <pre><code contenteditable class = "html">
+  &lt;head>
+    &lt;script type="text/javascript" src="jquery.js">&lt;/script>
+  &lt;/head>
+          </code></pre>
+          </div>
+          <div class = "fragment">
+          Include the the live library:
+          <pre><code contenteditable class = "html">
+  &lt;head>
+    &lt;script type="text/javascript" src="http://code.jquery.com/jquery-1.8.3.min.js">
+    &lt;/script>
+  &lt;/head>
+          </code></pre>
+          </div>
+          <div class="fragment">
+            Note: live code can change! Either link directly to a jQuery version or download.
+          </div>
+        </section>
+
+        <section>
+          <h3>Using jQuery - $</h3>
+          <p>Much like the real world, $ is king in jQuery</p>
+          <p class="fragment">$ represents the jQuery 'function'</p>
+          <p class="fragment">It unlocks the power of jQuery</p>
+          <p class="fragment">Use it just like a function:</p>
+<pre class="fragment"><code class="javascript">
+var someElement = $(selector);
+</code></pre>          
+
+        </section>
+
+                <!-- Selectors-->
+        <section>
+          <h3>jQuery Selectors</h3>
+          <p>Remember <span class="green">document.getElementById()</span> and <span class="green">documet.getElementsByTagName()</span>? </p>
+          <p class="fragment"> jQuery selectors let you get elements by: </p>
+          <ul>
+            <li class = "fragment">Element name (div, p)
             <pre><code contenteditable class = "javascript">
-              document.createElement(tagName);
-              document.createTextNode(text);
-              document.appendChild();
+      var divs = $("div"); // All divs on page
+            </code></pre>
+            </li>
+            <li class = "fragment">ID name (#mainpicture, #results)
+            <pre><code contenteditable class = "javascript">
+var img = $("#mainpicture"); //img with id mainpicture
+            </code></pre>
+            </li>
+            <li class = "fragment">Class name (.result, .picture)
+            <pre><code contenteditable class = "javascript">
+var images = $(".picture"); //All images with class picture 
+            </code></pre> 
+            </li>
+          </ul>
+        </section>
+      
+        
+        <!-- Actions-->
+        <section>
+          <h3>jQuery Actions</h3>
+          <div class = "left-align">
+            <p class = "fragment">jQuery has hundreds of actions that can be performed on any element</p>
+            <p class = "fragment">All the actions are methods</p>
+            <p class = "fragment">As methods they are called with dot notation</p>
+          </div>
+          <div class = "fragment">
+            Action format
+            <pre><code contenteditable class = "javascript">
+        $(selector).action();     
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Attributes and css-->
+        <section>
+          <h3>Updating attributes and css</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+  &lt;img id="mainpicture" src="http://girldevelopit.com/assets/pink-logo.png">         
             </code></pre>
           </div>
           <div class = "fragment">
+            Attribute get and set
             <pre><code contenteditable class = "javascript">
-var newImg = document.createElement('img');
-newImg.src = 'http://girldevelopit.com/assets/pink-logo.png';
-document.body.appendChild(newImg);
+  var img = $('#mainpicture');
+  img.attr('src');
+  img.attr('src', 'http://girldevelopit.com/assets/pink-logo.png');
             </code></pre>
           </div>
           <div class = "fragment">
+            CSS property get and set
             <pre><code contenteditable class = "javascript">
-var newParagraph = document.createElement('p');
-var paragraphText = document.createTextNode('New Paragraph!');
-newParagraph.appendChild(paragraphText);
-document.body.appendChild(newParagraph);
+  var img = $('#mainpicture');
+  img.css('width');
+  img.css('width', '200px');
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- html values-->
+        <section>
+          <h3>Updating values and html</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+  &lt;div class = "results">Boo!&lt;/div>         
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Get and set html value
+            <pre><code contenteditable class = "javascript">
+  var div = $('#results');
+  div.html();
+  div.html('New html!');
+            </code></pre>
+          </div>
+        </section>
+        
+        <!-- Append and prepend-->
+        <section>
+          <h3>Append and Prepend</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+  &lt;div class = "results">Boo!&lt;/div>         
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Append html
+            <pre><code contenteditable class = "javascript">
+    var div = $('#results');
+    div.append('Additional html');
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Prepend html
+            <pre><code contenteditable class = "javascript">
+    var div = $('#results');
+    div.prepend('Additional html (on top)');
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Creating new element</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+    var newDiv = $('&lt;div>&lt;/div>');
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Seriously. That's it!
+          </div>
+        </section>
+        
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It!</h3>
+          <p>Try to convert last week's DOM interaction into jQuery.</p>
+          <p>Don't forget to include jQuery in your html head!</p>
+        </section>
+        
+        <!-- Document Ready-->
+        <section>
+          <h3>Document Ready</h3>
+          <div class = "left-align">
+          <p>Webpages take time to load</p>
+          <p class = "fragment">Almost always, you don't want the JavaScript to be called until the page is loaded</p>
+          </div>
+          <div class = "fragment">
+            Document ready is a method called when the page is loaded
+            <pre><code contenteditable class = "javascript">
+        $(document).ready(function(){
+          
+        });
+            </code></pre>
+          </div>
+          <div class = "fragment left-align">
+            <span class = "yellow">Note:</span> The function() inside is an "anonymous function". It has no name, but still performs like a function.
+          </div>
+        </section>
+        
+        <!-- HTML Events-->
+        <section>
+          <h3>HTML events</h3>
+          <p>Events occur on a webpage via user interaction</p>
+          <p class = "fragment">Common Events:</p>
+          <ul>
+            <li class = "fragment">mouseenter -- mouse goes inside an element</li>
+            <li class = "fragment">mouseleave -- mouse leaves an element</li>
+            <li class = "fragment">click -- mouse clicks an element</li>
+            <li class = "fragment"><a href = "http://api.jquery.com/category/events/" target = "_blank">Other events</a></li>
+          </ul>
+        </section>
+        
+        <section>
+          <h3>Handling events</h3>
+      <pre><code contenteditable class = "javascript">
+  $(selector).mouseenter(function(){
+    //code when the mouse enters
+  })
+      </code></pre>
+          <div class = "fragment">
+      <pre><code contenteditable class = "javascript">
+  $('.box').mouseenter(function(){
+    $(this).css('background-color', 'purple')
+  })
       </code></pre>
           </div>
-          
+          <div class = "fragment left-align">
+            <div>The <span class = "green">$(this)</span> selector in jQuery refers to the element on whom the action was called.</div>
+            <div>Here <span class = "green">$(this)</span> is the <span class = "blue">$('.box')</span> that the mouse entered.
+          </div>
+        </section>
+        
+        <section>
+          <h3>Handling event examples</h3>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+      $('.box').mouseenter(function(){
+        $(this).css('background-color', 'purple')
+      })
+            </code></pre>
+          </div>
+          <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+      $('.box').mouseleave(function(){
+        $(this).css('background-color', 'orange')
+      })
+          </code></pre>
+          </div>
+          <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+      $('.box').click(function(){
+        $(this).css('background-color', 'green')
+      })
+          </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Combining events</h3>
+          <p>If you want multiple events to happen on the same element, you should use the bind method</p>
+          <div class = "fragment">
+          <pre><code contenteditable class = "javascript">
+      $('.box').bind({
+        click: function() {
+          $(this).css('background-color', 'green')
+        },
+        mouseenter: function() {
+          $(this).css('background-color', 'purple')
+        },
+        mouseleave: function(){
+          $(this).css('background-color', 'orange')
+        }
+      });
+          </code></pre>
+          </div>
         </section>
         
         <!-- Exercise-->
         <section>
           <h3>Let's Develop It</h3>
           <ul>
-            <li>Put it all together</li>
-            <li>Modify your existing three functions to add new elements to the screen instead of fire an alert</li>
-            <li>Keep in mind how to find an element, how to append an element, and how to change the inner html of an element</li>
-            <li>There are lots of possible solutions! Be creative!</li>
+            <li>Add a div to your html that is 100px by 200px</li>
+            <li>Bind events to the div in your javascript file</li>
+            <li>Don't forget to surround your events with document ready</li>
+            <li>Try to change size, color, or event the html inside the div</li>
+            <li>Bonus: change all the onclick events to jQuery click events</li>
           </ul>
         </section>
-        <!-- -->
+        
+        <!-- HTML forms-->
+        <section>
+          <h3>HTML forms</h3>
+          <p>HTML Forms allow users to enter information</p>
+          <div class = "fragment">
+            <pre><code contenteditable class = "html">
+&lt;form id ="about-me">
+  &lt;input type = "text" id = "name" placeholder = "Enter a name"/>
+  &lt;label>Do you like popcorn&lt;/label>
+  Yes &lt;input type = "radio" name = "popcorn" val = "yes"/>
+  No &lt;input type = "radio" name = "popcorn" val = "no"/>
+  &lt;label>Favorite Dinosaur&lt;/label>
+  &lt;select id = "dinosaur">
+    &lt;option value = "t-rex">Tyrannosaurus Rex&lt;/option>
+    &lt;option value = "tri">Triceratops&lt;/option>
+    &lt;option value = "stego">Stegosaurus&lt;/option>
+    &lt;option value = "other">Other&lt;/option>
+  &lt;/select>
+  &lt;input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
+&lt;/form>
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>HTML forms</h3>
+          <p>HTML Forms allow users to enter information</p>
+          <div class = "fragment left-align">
+<form>
+  <input type = "text" id = "name" placeholder = "Enter a name" style = "width:300px; padding: 7px; font-size:1em"/><br/>
+  <label>Do you like popcorn</label><br/>
+  Yes <input type = "radio" name = "popcorn" val = "yes" style ="font-size:1em"/>
+  No <input type = "radio" name = "popcorn" val = "no" style ="font-size:1em"/><br/>
+  <label>Favorite Dinosaur</label><br/>
+  <select id = "dinosaur" style = "padding: 7px; font-size:1em">
+    <option>Tyrannosaurus Rex</option>
+    <option>Triceratops</option>
+    <option>Stegosaurus</option>
+    <option>Other</option>
+  </select><br/>
+  <input type = "submit" value = "Go!" style = "padding: 7px; font-size:1em"/>
+</form>
+          </div>
+        </section>
+        
+        <!-- JavaScript and HTML Forms-->
+        <section>
+          <h3>Values from Forms</h3>
+          <p>You can use JavaScript to get values from a form</p>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+    $('#name').val();
+    $('select#dinosaur').val();
+    $('input:radio[name=popcorn]:checked').val();
+            </code></pre>
+          </div>
+          <div class = "fragment">
+            Or set values of a form
+            <pre><code contenteditable class = "javascript">
+    $('#name').val('Mitch');
+    $('select#dinosaur').val('stego');
+    $('input:radio[name=popcorn]:checked').val('no');
+            </code></pre>
+          </div>
+        </section>
+        
+        <section>
+          <h3>Values from Forms</h3>
+          <p>jQuery has an event for form submission</p>
+          <div class = "fragment">
+            <pre><code contenteditable class = "javascript">
+      $('#about-me').submit(function(event){
+            //code to execute after submission
+            return false;
+        });
+            </code></pre>
+            <span class = "yellow">"return false"</span> to prevent the form trying to submit to a server.
+          </div>
+        </section>
+        
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <ul>
+            <li>Choose one (or all!) of your functions made so far</li>
+            <li>i.e. lifetime supply, favorite things, or my friends</li>
+            <li>Create a form to send dynamic data to the function when you click the button</li>
+            <li>Don't forget to add parameters to your existing functions!</p>
+            <li>This is a little harder than all the other exercises.</li>
+            <li>Be creative!</li>
+          </ul>
+        </section>
+
         <section>
           <h2>Questions?</h2>
           <div style = "font-size:1200%; height:100%; margin-top:40%" class ="blue">?
             <div class ="clear"></div></div>
         </section>
-			</div>
-  		<footer>
+      </div>
+      <footer>
         <div class="copyright">
           Javascript ~ Girl Develop It ~
           <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
         </div>
       </footer>
-		</div>
+    </div>
 
 
-		<script src="reveal/lib/js/head.min.js"></script>
-		<script src="reveal/js/reveal.min.js"></script>
+    <script src="reveal/lib/js/head.min.js"></script>
+    <script src="reveal/js/reveal.min.js"></script>
 
-		<script>
+    <script>
 
-			// Full list of configuration options available here:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
-			});
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal/plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+          { src: 'reveal/plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'reveal/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+      });
 
-		</script>
+    </script>
 
-	</body>
+  </body>
 </html>

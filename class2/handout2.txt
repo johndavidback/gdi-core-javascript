@@ -1,0 +1,59 @@
+Handout 2
+
+
+To grab an element by id:
+
+    Old JS way:
+    document.getElementById('the-id-goes-here');
+
+
+    Shiny new jQuery way:
+    $('the-id-goes-here');
+
+
+Then you can do some fun stuff with it:
+
+
+    Hide it
+    $('the-id-goes-here').hide();
+
+
+    Show it
+    $('the-id-goes-here').show();
+
+
+    Change it using .css(propertyName, value)
+
+    $('the-id-goes-here').css('width', '500px');
+
+      or
+
+    $('the-id-goes-here').css('background-color', 'red');
+
+
+    Change it by adding or removing a class
+
+    $("the-id-goes-here").addClass("test");
+
+    $("the-id-goes-here").removeClass("test");
+
+
+    Fade Out
+    $("the-id-goes-here").fadeOut();
+
+
+    Fade In
+    $("the-id-goes-here").fadeIn();
+
+
+
+    Slide up
+    $("the-id-goes-here").slideUp();
+
+
+    Slide down
+    $("the-id-goes-here").slideDown();
+
+
+    Animate something!
+    $("#john-himself").animate({ opacity:'0.5', height:'300px', width:'300px'});
