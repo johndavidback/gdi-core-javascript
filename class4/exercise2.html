@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Let's make a date</title>
+        <style>
+            body {
+                font-family: Georgia;
+                padding-left: 30px;
+            }
+
+        </style>
+
+        <!-- jQuery UI darkness theme -->
+        <link href="http://code.jquery.com/ui/1.10.2/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+
+        <!-- Bonus 2: jQuery hot sneaks theme -->
+        <!-- link href="http://code.jquery.com/ui/1.10.2/themes/hot-sneaks/jquery-ui.css" rel="stylesheet" -->
+
+    </head>
+
+    <body>
+
+        <h1>Let's make a date.</h1>
+
+        
+        <p>I should like to go on this date: <input type="text" id="datepicker"></p>
+
+        <!-- Bonus 1 -->
+        <h1>I'm traveling these dates</h1>
+        <label for="from">From</label>
+        <input type="text" id="from" name="from" />
+        <label for="to">to</label>
+        <input type="text" id="to" name="to" />
+
+
+
+        <!-- Include jQuery from the jquery CDN -->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+        <!-- Include jQuery UI from the jquery CDN -->
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+        <!-- Use jQuery to invoke the draggable -->
+        <script>
+        $(document).ready(function() {
+
+            $("#datepicker").datepicker();
+
+            $( "#from" ).datepicker({
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 2,
+              onClose: function( selectedDate ) {
+                $( "#to" ).datepicker( "option", "minDate", selectedDate );
+              }
+            });
+            
+            $( "#to" ).datepicker({
+              defaultDate: "+1w",
+              changeMonth: true,
+              numberOfMonths: 2,
+              onClose: function( selectedDate ) {
+                $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+              }
+            });
+
+        });
+        </script>
+
+        <!--
+            Bonus hints:
+
+            - An ID allows you to select one.
+
+            - A class allows you to select two.
+
+            - jQuery selectors sync up to CSS selectors...
+
+        -->
+
+    </body>
+
+</html>

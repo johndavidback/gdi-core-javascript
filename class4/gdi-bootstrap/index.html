@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Bootstrap Site : Home</title>
+        
+        <!-- Your bootstrap css -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+    
+    <!-- This is your navigation -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="index.html">My Site!</a>
+            <ul class="nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+    
+    <!-- This is your main body -->
+    <div class="container">
+        <h1>Welcome to my site!</h1>
+        <p>On this site I'm going to have some really great stuff.  I hope you like it!</p>
+
+        <h3>A Bootstrap JS example:</h3>
+        <p>I have no idea why this belongs on the home page.</p>
+
+        <!-- Button to trigger modal -->
+        <a href="#myModal" role="button" class="btn" data-toggle="modal">Tell me more</a>
+         
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+                <h3 id="myModalLabel">Okay, I will tell you more.</h3>
+            </div>
+            <div class="modal-body">
+                <p>Bootstrap uses jQuery and JS to read HTML attributes to create things like this.</p>
+                <p>Similar to how we used Lightbox 2, we have no need to type any actual JS into our page!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Close</button>
+          </div>
+        </div>
+    </div>
+    
+    <!-- Bootstrap and other js scripts, these need to be here at the bottom -->   
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    
+    </body>
+</html>
