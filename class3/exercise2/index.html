@@ -8,10 +8,16 @@
                 font-family: Georgia;
                 padding-left: 30px;
             }
+
+            .thumb {
+                width: 150px;
+                border: 2px solid black;
+            }
+
         </style>
 
         <!-- Link to the lightbox .css file here -->
-
+        <link href="css/lightbox.css" rel="stylesheet">
 
     </head>
 
@@ -19,24 +25,36 @@
 
         <h1>Let's add some totally rad stuff.</h1>
 
-        <p>Replace me with your &lt;img&gt;'s</p>
+        <a href="http://placecage.com/500/500" rel="lightbox">some text here</a>
+
+        <div>
+            <a href="http://placecage.com/400/400" rel="lightbox[gallery]">
+                <img src="http://placecage.com/400/400" class="thumb">
+            </a>
+        </div>
+        <div>
+            <a href="http://placecage.com/300/300" rel="lightbox[gallery]">
+                <img src="http://placecage.com/300/300" class="thumb">
+            </a>
+        </div>
+        <div>
+            <a href="http://placesheen.com/400/400" rel="lightbox[gallery]">
+                <img src="http://placesheen.com/400/400" class="thumb">
+            </a>
+        </div>
+        <div>
+            <a href="http://placekitten.com/400/400" rel="lightbox[gallery]">
+                <img src="http://placekitten.com/400/400" class="thumb">
+            </a>
+        </div>
+
 
 
         <!-- Include jQuery from the CDN -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
 
         <!-- Include the lightbox js -->
-        
-
-        <script>
-            $(document).ready(function() {
-
-                // Add your fancy jQuery here to get lightbox working. Good luck!
-                
-
-            });
-
-        </script>
+        <script src="js/lightbox.js"></script>
 
     </body>
 

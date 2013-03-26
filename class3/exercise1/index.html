@@ -11,6 +11,8 @@
         </style>
 
         <!-- Link to the bjqs.css and demo.css files here -->
+        <link href="bjqs.css" rel="stylesheet">
+        <link href="demo.css" rel="stylesheet">
 
 
     </head>
@@ -19,21 +21,32 @@
 
         <h1>Let's add some totally rad stuff.</h1>
 
-        <p>Replace me with your &lt;ul&gt; and &lt;li&gt;'s.</p>
+        <div id="my-slideshow">
+            <ul class="bjqs">
+                <li><img src="http://placecage.com/500/300"></li>
+                <li><img src="http://placekitten.com/500/300" title="Fun little captions"></li>
+                <li><img src="http://placecage.com/400/300"></li>
+            </ul>
+        </div>
 
 
         <!-- Include jQuery from the CDN -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" ></script>
 
         <!-- Include the Basic jQuery Slider js -->
+        <script src="js/bjqs-1.3.min.js"></script>
         
 
         <script>
             $(document).ready(function() {
 
                 // Add your fancy jQuery here to get the slider working. Good luck!
+                $("#my-slideshow").bjqs({
+                    'height': 300,
+                    'width': 500,
+                    'animtype': 'slide'
+                });
                 
-
             });
 
         </script>
