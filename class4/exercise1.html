@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>Kitties are a drag</title>
+        <style>
+            body {
+                font-family: Georgia;
+                padding-left: 30px;
+            }
+
+        </style>
+
+        <link href="http://code.jquery.com/ui/1.10.2/jquery-ui.js" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <h1>Let's drag around some totally rad stuff.</h1>
+
+        
+        <img id="draggable" src="http://placekitten.com/200/200">
+
+
+        <!-- Include jQuery from the jquery CDN -->
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
+        <!-- Include jQuery UI from the jquery CDN -->
+        <script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+
+        <!-- Use jQuery to invoke the draggable -->
+        <script>
+        $(document).ready(function() {
+
+            $("#draggable").draggable();
+
+        });
+        </script>
+
+        <!--
+            Bonus hints:
+
+            - An ID allows you to select one.
+
+            - A class allows you to select two.
+
+            - jQuery selectors sync up to CSS selectors...
+
+        -->
+
+    </body>
+
+</html>
